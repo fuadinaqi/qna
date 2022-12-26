@@ -1,5 +1,8 @@
+// dependency libraries
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
+
+// components
 import { MainComponent } from './pages/main/main.component'
 import { NotFoundComponent } from './pages/not-found/not-found.component'
 
