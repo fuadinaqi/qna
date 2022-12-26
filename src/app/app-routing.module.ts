@@ -10,15 +10,18 @@ const routes: Routes = [
     children: [
       {
         path: 'qna',
-        loadChildren: () => import('./pages/qna/qna.module').then((m) => m.QnaModule),
+        loadChildren: () =>
+          import('./pages/qna/qna.module').then((m) => m.QnaModule),
       },
       {
         path: 'score',
-        loadChildren: () => import('./pages/score/score.module').then((m) => m.ScoreModule),
+        loadChildren: () =>
+          import('./pages/score/score.module').then((m) => m.ScoreModule),
       },
       {
         path: '',
-        loadChildren: () => import('./pages/login/login.module').then((m) => m.LoginModule),
+        loadChildren: () =>
+          import('./pages/login/login.module').then((m) => m.LoginModule),
       },
     ],
   },

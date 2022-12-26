@@ -20,7 +20,12 @@ import { appReducer } from './stores/app.reducers'
 import { QnaModule } from './pages/qna/qna.module'
 
 @NgModule({
-  declarations: [AppComponent, MainComponent, NotFoundComponent, HeaderComponent],
+  declarations: [
+    AppComponent,
+    MainComponent,
+    NotFoundComponent,
+    HeaderComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

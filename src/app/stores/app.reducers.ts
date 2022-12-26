@@ -5,7 +5,10 @@ const initialState: AppActions.AppData = {
   points: 0,
 }
 
-export function appReducer(state = initialState, action: AppActions.Login | AppActions.AddPoint) {
+export function appReducer(
+  state = initialState,
+  action: AppActions.Login | AppActions.AddPoint
+) {
   switch (action.type) {
     case AppActions.LOGIN:
       if (!action.payload) return state

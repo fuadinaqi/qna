@@ -8,6 +8,12 @@ import { QnaComponent } from './qna.component'
 
 @NgModule({
   declarations: [QnaComponent, QnaDetailComponent],
-  imports: [QnaRoutingModule, MaterialModule, ReactiveFormsModule, FormsModule, CommonModule],
+  imports: [
+    QnaRoutingModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    FormsModule,
+    CommonModule,
+  ],
 })
 export class QnaModule {}

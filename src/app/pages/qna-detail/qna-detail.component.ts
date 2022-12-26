@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core'
 import { ActivatedRoute, Router } from '@angular/router'
 import { Store } from '@ngrx/store'
 import { Soal, data } from 'src/app/data'
-import { AddPoint, AppData, Login } from 'src/app/stores/app.actions'
+import { AddPoint, AppData } from 'src/app/stores/app.actions'
 
 @Component({
   selector: 'app-qna-detail',
@@ -17,7 +17,11 @@ export class QnaDetailComponent implements OnInit {
     jawabans: [],
   }
 
-  constructor(private store: Store<{ app: AppData }>, private activatedRoute: ActivatedRoute, private router: Router) {}
+  constructor(
+    private store: Store<{ app: AppData }>,
+    private activatedRoute: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((value) => {
@@ -39,7 +43,9 @@ export class QnaDetailComponent implements OnInit {
     if (isAddPoint) {
       this.store.dispatch(new AddPoint(20))
     }
-    const currentIndexSoal = data.soal.findIndex((s) => s.id === this.dataSoal.id)
+    const currentIndexSoal = data.soal.findIndex(
+      (s) => s.id === this.dataSoal.id
+    )
     if (currentIndexSoal < data.soal.length - 1) {
       this.router.navigate(['/qna/', data.soal[currentIndexSoal + 1].id])
     } else {
