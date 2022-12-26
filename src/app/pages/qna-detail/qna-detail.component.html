@@ -1,0 +1,20 @@
+<section class="container">
+  <mat-card class="card-landing">
+    <mat-card-header>
+      <mat-progress-bar [value]="progressValue"></mat-progress-bar>
+    </mat-card-header>
+    <mat-card-content class="card-content">
+      <h1 class="big-text">{{ dataSoal.deskripsi }}</h1>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-grid-list cols="2" rowHeight="3:1">
+      <ng-container *ngFor="let jawaban of dataSoal.jawabans">
+        <div (click)="onClickJawaban(jawaban)">
+          <mat-grid-tile>
+            {{ jawaban }}
+          </mat-grid-tile>
+        </div>
+      </ng-container>
+    </mat-grid-list>
+  </mat-card>
+</section>
